@@ -28,7 +28,7 @@ jobs:
         SOURCE: "."
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
-        TARGET: "/usr/local/bin/php/home/iqkjgzqtvgb7/public_html"
+        TARGET: "public_html/staging-ticketing.wgroup.space"
 
     - name: run remote/artisan commands
       uses: appleboy/ssh-action@v0.1.6
