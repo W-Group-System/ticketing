@@ -19,7 +19,7 @@ jobs:
         php-version: 7.4
 
     - name: Install composer
-      run: composer install --optimizer-autoloader --no-dev --no-progress --no-interaction --prefer-dist
+      run: composer install --optimize-autoloader --no-dev --no-progress --no-interaction --prefer-dist
 
     - name: sync files to server
       uses: easingthemes/ssh-deploy@v2.1.5
