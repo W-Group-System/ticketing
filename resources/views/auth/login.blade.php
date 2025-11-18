@@ -8,7 +8,7 @@
     <form id="login-form" action="{{ url('login') }}" method="post">
         @csrf
 
-        <h2 class="login-title">Log in </h2>
+        <h2 class="login-title">Log in  </h2>
 
         @if ($errors->any())
         <div class="alert alert-danger">
