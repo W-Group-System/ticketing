@@ -22,7 +22,7 @@ jobs:
       run: composer install --optimize-autoloader --no-dev --no-progress --no-interaction --prefer-dist
 
     - name: sync files to server
-      uses: easingthemes/ssh-deploy@v2.1.5
+      uses: easingthemes/ssh-deploy@v4.1.8
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         SOURCE: "."
@@ -38,4 +38,9 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: | 
           cd public_html/staging-ticketing.wgroup.space
-          php artisan optimize  
+          php artisan optimize
+          composer install --no-dev --optimize-autoloader
+          php artisan config:clear
+          php artisan cache:clear
+          php artisan route:clear
+          php artisan view:clear
