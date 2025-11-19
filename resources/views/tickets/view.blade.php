@@ -8,7 +8,7 @@
                 <div style="display: flex; flex-direction:row; justify-content:space-between;">
                     <h6 class="card-title">View ticket details</h6>
 
-                    @if(auth()->user()->role->name != "User" && $ticket->status == "Open")
+                    @if(auth()->user()->role->name != "User" && $ticket->status == "Open" && ($ticket->assign_by == auth()->user()->id))
                     <div>
                         <form method="post" action="{{ url('tickets/acknowledgement/'.$ticket->id) }}" style="display: inline-block;">
                             @csrf
