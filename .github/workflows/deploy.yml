@@ -25,7 +25,7 @@ jobs:
       uses: easingthemes/ssh-deploy@v4.1.8
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SOURCE: "."
+        SOURCE: "./"
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
         TARGET: "/home/iqkjgzqtvgb7/public_html/staging-ticketing.wgroup.space"
