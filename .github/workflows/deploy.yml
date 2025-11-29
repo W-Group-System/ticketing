@@ -29,6 +29,7 @@ jobs:
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
         TARGET: "/home/iqkjgzqtvgb7/public_html/staging-ticketing.wgroup.space"
+        EXCLUDE: ".git*, .github*, /node_modules/, /vendor/, /storage/logs/, /storage/framework/cache/data/"
 
     - name: run remote/artisan commands
       uses: appleboy/ssh-action@v0.1.6
