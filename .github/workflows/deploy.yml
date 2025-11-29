@@ -29,7 +29,8 @@ jobs:
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
         TARGET: "/home/iqkjgzqtvgb7/public_html/staging-ticketing.wgroup.space"
-        EXCLUDE: |
+        ARGS: "-rlgoDzvc -i"
+        EXCLUDE:  |
           .git*
           .github*
           node_modules/
