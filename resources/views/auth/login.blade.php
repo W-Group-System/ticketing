@@ -3,7 +3,7 @@
 @section('content')
 <div class="content">
     <div class="brand">
-        <a class="link" href="{{ url('/') }}">Ticketing Portal    </a>
+        <a class="link" href="{{ url('/') }}">Ticketing Portalssssssssssssssssssssssssssssssss</a>
     </div>
     <form id="login-form" action="{{ url('login') }}" method="post">
         @csrf
