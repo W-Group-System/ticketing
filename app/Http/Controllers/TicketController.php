@@ -183,6 +183,7 @@ class TicketController extends Controller
 
     public function comment(Request $request, $id)
     {
+        // dd($request->all());
         $request->validate([
             'comment' => 'required'
         ]);

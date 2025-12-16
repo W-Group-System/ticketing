@@ -18,9 +18,10 @@
     <!-- PAGE LEVEL STYLES-->
     <link href="{{ asset('assets/vendors/DataTables/datatables.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/vendors/select2/dist/css/select2.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/vendors/summernote/dist/summernote.css') }}" rel="stylesheet" />
+    {{-- <link href="{{ asset('assets/vendors/summernote/dist/summernote.css') }}" rel="stylesheet" /> --}}
     <link href="{{ asset('assets/vendors/bootstrap-markdown/css/bootstrap-markdown.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/vendors/morris.js/morris.css') }}" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css" rel="stylesheet">
 </head>
 
 <body class="fixed-navbar">
@@ -205,10 +206,11 @@
     <script src="{{ asset('assets/js/app.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/vendors/DataTables/datatables.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/vendors/select2/dist/js/select2.full.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/vendors/summernote/dist/summernote.min.js') }}" type="text/javascript"></script>
+    {{-- <script src="{{ asset('assets/vendors/summernote/dist/summernote.min.js') }}" type="text/javascript"></script> --}}
     <script src="{{ asset('assets/vendors/bootstrap-markdown/js/bootstrap-markdown.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/vendors/morris.js/morris.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/vendors/raphael/raphael.min.js') }}" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script>
     <!-- PAGE LEVEL SCRIPTS-->
     {{-- <script src="./assets/js/scripts/dashboard_1_demo.js" type="text/javascript"></script> --}}
     <script>

@@ -135,7 +135,7 @@
                                             </a>
                                             <div class="media-body">
                                                 <div class="media-heading">{{ $thread->user->name }} <small class="float-right text-muted">{{ $thread->updated_at->diffForHumans() }}</small></div>
-                                                <div class="font-13">{!! nl2br(e(strip_tags($thread->comment))) !!}</div>
+                                                <div class="font-13">{!! $thread->comment !!}</div>
                                                 <div style="display: flex; flex-direction:row; column-gap:5px; margin-top:20px;">
                                                     <div>
                                                         <small><a class="text-primary" onclick="editComment({{ $thread->id }})">Edit</a></small>
@@ -164,7 +164,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     Comment :
-                                    <textarea name="comment" class="form-control input-sm" placeholder="Write a comment..." cols="30" rows="10"></textarea>
+                                    <textarea name="comment" class="form-control input-sm" id="summernote" placeholder="Write a comment..." cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="col-md-12">
                                     <button type="submit" class="btn btn-success float-right mt-4">Comment</button>
@@ -211,6 +211,11 @@
         $(document).on('click', '.deleteComment', function() {
             $(this).closest('form').submit();
         })
+
+        $('#summernote').summernote({
+            height: 300,
+            placeholder: "Write your concern here..."
+        });
     })
 </script>
 @endsection

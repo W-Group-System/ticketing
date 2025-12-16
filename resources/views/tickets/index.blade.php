@@ -102,6 +102,11 @@
             ordering: false,
             pageLength: 15
         })
+
+        $('#summernote').summernote({
+            height: 300,
+            placeholder: "Write your concern here..."
+        });
     })
 </script>
 @endsection

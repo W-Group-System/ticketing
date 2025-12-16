@@ -10,7 +10,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-lg-6">
-                            Viber Number : <span class="text-danger">*</span>
+                            Viber Number / Skype Number : <span class="text-danger">*</span>
                             <input type="tel" name="viber_number" class="form-control input-sm" placeholder="Ex: +639123456789" value="{{ old('viber_number') }}">
                         </div>
                         <div class="col-lg-6">
@@ -24,12 +24,12 @@
                         </div>
                         <div class="col-lg-12">
                             Concern : <span class="text-danger">*</span>
-                            <textarea name="task" class="form-control input-sm" cols="30" rows="10">{{ old('task') }}</textarea>
+                            <textarea name="task" class="form-control input-sm" id="summernote">{{ old('task') }}</textarea>
                         </div>
-                        <div class="col-lg-12">
+                        {{-- <div class="col-lg-12">
                             Attachment : (optional)
                             <input type="file" name="attachment" class="form-control input-sm">
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="modal-footer">
